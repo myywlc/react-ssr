@@ -1,7 +1,7 @@
 import React from 'react';
 import App from './App';
-import Home from './containers/Home';
-import Translation from './containers/Translation';
+import A from './containers/Home';
+import B from './containers/Translation';
 import NotFind from './containers/NotFind';
 
 export default [{
@@ -10,17 +10,17 @@ export default [{
   loadData: App.loadData,
   routes: [
     {
-      path: '/',
-      component: Home,
+      path: '/a',
+      component: A,
       exact: true,
-      loadData: Home.loadData,
-      key: 'home'
+      loadData: A.loadData,
+      key: 'a'
     }, {
-      path: '/Translation',
-      component: Translation,
-      loadData: Translation.loadData,
+      path: '/b',
+      component: B,
+      loadData: B.loadData,
       exact: true,
-      key: 'translation'
+      key: 'b'
     }, {
       component: NotFind
     }
