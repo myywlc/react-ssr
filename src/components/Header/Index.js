@@ -1,7 +1,7 @@
 import React, { Fragment, Component } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './index.css'
-import withStyle from '../../withStyle'
+import serverAddStyle from '../../serverAddStyle'
 
 class Header extends Component {
   
@@ -17,4 +17,4 @@ class Header extends Component {
   
 }
 
-export default withStyle(Header, styles)
+export default serverAddStyle(Header, styles)

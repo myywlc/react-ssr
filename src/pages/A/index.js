@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import { Helmet } from 'react-helmet'
 import styles from './style.css'
-import withStyle from '../../withStyle'
+import serverAddStyle from '../../serverAddStyle'
 
 class A extends Component {
   
@@ -21,4 +21,4 @@ class A extends Component {
   }
 }
 
-export default withStyle(A, styles)
+export default serverAddStyle(A, styles)

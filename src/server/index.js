@@ -6,6 +6,7 @@ import { getStore } from '../store'
 import routes from '../Routes'
 
 const app = express();
+
 app.use(express.static('public'));
 
 app.use('/api', proxy('http://localhost:8080', {
@@ -20,6 +21,7 @@ app.get('*', function (req, res) {
   const store = getStore(req);
   const matchedRoutes = matchRoutes(routes, req.path);
   const promises = [];
+  
   matchedRoutes.forEach(item => {
     if (item.route.loadData) {
       const promise = new Promise((reslove, reject) => {
@@ -28,6 +30,7 @@ app.get('*', function (req, res) {
       promises.push(promise)
     }
   });
+  
   Promise.all(promises).then(() => {
     const context = {css: []};
     const html = render(store, routes, req, context);
@@ -42,6 +45,7 @@ app.get('*', function (req, res) {
   }).catch(() => {
     res.send('sorry,requset error')
   })
+  
 });
 
 app.listen(3000);

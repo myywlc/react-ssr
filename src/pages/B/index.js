@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { getBList } from './store/actions'
 import { Helmet } from 'react-helmet'
 import styles from './style.css'
-import withStyle from '../../withStyle'
+import serverAddStyle from '../../serverAddStyle'
 
 class B extends Component {
   
@@ -38,7 +38,7 @@ const mapDispatchToProps = dispatch => ({
   }
 });
 
-const ExportB = connect(mapStateToProps, mapDispatchToProps)(withStyle(B, styles));
+const ExportB = connect(mapStateToProps, mapDispatchToProps)(serverAddStyle(B, styles));
 
 ExportB.loadData = (store) => {
   return store.dispatch(getBList())

@@ -1,8 +1,8 @@
 import React from 'react'
 import App from './App'
-import A from './containers/A'
-import B from './containers/B'
-import NotFind from './containers/NotFind'
+import A from './pages/A'
+import B from './pages/B'
+import NotFind from './pages/NotFind'
 
 export default [{
   path: '/',
