@@ -8,7 +8,7 @@ const reducer = combineReducers({
   b: bReducer
 });
 
-export const getStore = (req) => {
+export const getServerStore = (req) => {
   return createStore(reducer, applyMiddleware(thunk.withExtraArgument(serverAxios(req))));
 };
 

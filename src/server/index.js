@@ -2,7 +2,7 @@ import express from 'express'
 import proxy from 'express-http-proxy'
 import { matchRoutes } from 'react-router-config'
 import { render } from './utils'
-import { getStore } from '../store'
+import { getServerStore } from '../store'
 import routes from '../Routes'
 
 const app = express();
@@ -18,14 +18,14 @@ app.use('/api', proxy('http://localhost:8080', {
 
 app.get('*', function (req, res) {
   
-  const store = getStore(req);
+  const store = getServerStore(req);
   const matchedRoutes = matchRoutes(routes, req.path);
   const promises = [];
   
   matchedRoutes.forEach(item => {
     if (item.route.loadData) {
-      const promise = new Promise((reslove, reject) => {
-        item.route.loadData(store).then(reslove).catch(reslove)
+      const promise = new Promise((resolve, reject) => {
+        item.route.loadData(store).then(resolve).catch(resolve)
       });
       promises.push(promise)
     }
@@ -43,7 +43,7 @@ app.get('*', function (req, res) {
       res.send(html);
     }
   }).catch(() => {
-    res.send('sorry,requset error')
+    res.send('sorry, request error')
   })
   
 });
