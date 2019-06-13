@@ -1,8 +1,8 @@
-import { createStore, applyMiddleware, combineReducers } from 'redux';
-import thunk from 'redux-thunk';
-import { reducer as bReducer } from '../containers/B/store';
-import clientAxios from '../client/request';
-import serverAxios from '../server/request';
+import { createStore, applyMiddleware, combineReducers } from 'redux'
+import thunk from 'redux-thunk'
+import { reducer as bReducer } from '../containers/B/store'
+import clientAxios from '../client/request'
+import serverAxios from '../server/request'
 
 const reducer = combineReducers({
   b: bReducer

@@ -1,8 +1,8 @@
-import React from 'react';
-import App from './App';
-import A from './containers/A';
-import B from './containers/B';
-import NotFind from './containers/NotFind';
+import React from 'react'
+import App from './App'
+import A from './containers/A'
+import B from './containers/B'
+import NotFind from './containers/NotFind'
 
 export default [{
   path: '/',

@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-export default (DecoratedCopmonent, styles) => {
+export default (DecoratedComponent, styles) => {
   return class NewComponent extends Component {
     componentWillMount() {
       if (this.props.staticContext) {
@@ -9,7 +9,7 @@ export default (DecoratedCopmonent, styles) => {
     }
     
     render() {
-      return <DecoratedCopmonent {...this.props} />
+      return <DecoratedComponent {...this.props} />
     }
   }
 }

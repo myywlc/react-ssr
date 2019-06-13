@@ -1,8 +1,7 @@
-import React, { Component, Fragment } from 'react';
-import { connect } from 'react-redux';
-import { getBList } from './store/actions';
+import React, { Component, Fragment } from 'react'
+import { connect } from 'react-redux'
+import { getBList } from './store/actions'
 import { Helmet } from 'react-helmet'
-
 import styles from './style.css'
 import withStyle from '../../withStyle'
 

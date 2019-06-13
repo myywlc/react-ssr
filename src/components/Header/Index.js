@@ -1,5 +1,5 @@
-import React, { Fragment, Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Fragment, Component } from 'react'
+import { Link } from 'react-router-dom'
 import styles from './index.css'
 import withStyle from '../../withStyle'
 
@@ -7,7 +7,7 @@ class Header extends Component {
   
   render() {
     return <Fragment>
-      <div className={styles.test}>
+      <div>
         <Link to='/a'>页面 A</Link>
         <br/>
         <Link to='/b'>页面 B</Link>
@@ -17,5 +17,4 @@ class Header extends Component {
   
 }
 
-export default withStyle(Header, styles);
-
+export default withStyle(Header, styles)

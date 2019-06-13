@@ -1,1 +1,1 @@
-export const CHANGE_LIST_Translation = 'CHANGE_LIST_Translation'
+export const CHANGE_DATA = 'CHANGE_DATA';

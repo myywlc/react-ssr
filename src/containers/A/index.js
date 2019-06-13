@@ -1,6 +1,4 @@
-import React, { Component, Fragment } from 'react';
-import { connect } from 'react-redux';
-import { getAList } from './store/actions';
+import React, { Component, Fragment } from 'react'
 import { Helmet } from 'react-helmet'
 import styles from './style.css'
 import withStyle from '../../withStyle'
@@ -19,9 +17,8 @@ class A extends Component {
           page A
         </div>
       </Fragment>
-    
     )
   }
 }
 
-export default A
+export default withStyle(A, styles)

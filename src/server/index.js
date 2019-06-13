@@ -1,9 +1,9 @@
-import express from 'express';
-import proxy from 'express-http-proxy';
+import express from 'express'
+import proxy from 'express-http-proxy'
 import { matchRoutes } from 'react-router-config'
-import { render } from './utils';
-import { getStore } from '../store';
-import routes from '../Routes';
+import { render } from './utils'
+import { getStore } from '../store'
+import routes from '../Routes'
 
 const app = express();
 app.use(express.static('public'));

@@ -1,7 +1,7 @@
-import { CHANGE_LIST_Translation } from './constants';
+import { CHANGE_DATA } from './constants'
 
 const changeList = (data) => ({
-  type: CHANGE_LIST_Translation,
+  type: CHANGE_DATA,
   data
 });
 
@@ -19,4 +19,4 @@ export const getBList = () => {
       }
     })
   }
-} 
+};
