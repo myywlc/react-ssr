@@ -10,11 +10,11 @@ const App = (props) => {
 			{renderRoutes(props.route.routes)}
 		</div>
 	)
-}
+};
 
 App.loadData = (store) => {
 	return store.dispatch(actions.getHeaderInfo());
-}
+};
 
 
 export default App;
