@@ -2,13 +2,11 @@ import axios from 'axios';
 import config from '../config/index'
 
 const createInstance = (req) => axios.create({
-  baseURL: 'http://47.95.113.63/ssr',
+  baseURL: 'http://http://localhost:8080/ssr/api',
   headers: {
     cookie: req.get('cookie') || ''
   },
-  params: {
-    secret: config.secret
-  }
+  params: {}
 });
 
 export default createInstance;

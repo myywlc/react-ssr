@@ -1,19 +1,17 @@
 import React from 'react';
 import App from './App';
-import A from './containers/Home';
-import B from './containers/Translation';
+import A from './containers/A';
+import B from './containers/B';
 import NotFind from './containers/NotFind';
 
 export default [{
   path: '/',
   component: App,
-  loadData: App.loadData,
   routes: [
     {
       path: '/a',
       component: A,
       exact: true,
-      loadData: A.loadData,
       key: 'a'
     }, {
       path: '/b',

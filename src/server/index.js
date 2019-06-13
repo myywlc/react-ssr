@@ -8,7 +8,7 @@ import routes from '../Routes';
 const app = express();
 app.use(express.static('public'));
 
-app.use('/api', proxy('http://47.95.113.63', {
+app.use('/api', proxy('http://localhost:8080', {
   proxyReqPathResolver: function (req) {
     console.log(req.url);
     return '/ssr/api' + req.url;
