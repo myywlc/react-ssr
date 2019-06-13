@@ -21,7 +21,9 @@ class B extends Component {
       </Helmet>
       <div className={styles.test}>
         page B
-        {this.props.data}
+        <div>
+          {this.props.data}
+        </div>
       </div>
     </Fragment>
   }

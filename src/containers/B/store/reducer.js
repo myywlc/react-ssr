@@ -1,7 +1,7 @@
 import { CHANGE_LIST_Translation } from './constants';
 
 const defaultState = {
-	dataB: ''
+	data: ''
 };
 
 export default (state = defaultState, action) => {
@@ -9,7 +9,7 @@ export default (state = defaultState, action) => {
 		case CHANGE_LIST_Translation:
 			return {
 				...state,
-				dataB: action.data
+				data: action.data
 			};
 		default:
 			return state;
