@@ -1,7 +1,7 @@
-import axios from 'axios'
+import axios from 'axios';
 
-const createInstance = (req) => axios.create({
+const createInstance = req => axios.create({
   baseURL: 'http://localhost:8080/ssr',
 });
 
-export default createInstance
+export default createInstance;

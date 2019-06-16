@@ -1,8 +1,8 @@
-import React from 'react'
-import App from './App'
-import A from './pages/A'
-import B from './pages/B'
-import NotFind from './pages/NotFind'
+import React from 'react';
+import App from './App';
+import A from './pages/A';
+import B from './pages/B';
+import NotFind from './pages/NotFind';
 
 export default [{
   path: '/',
@@ -12,15 +12,15 @@ export default [{
       path: '/a',
       component: A,
       exact: true,
-      key: 'a'
+      key: 'a',
     }, {
       path: '/b',
       component: B,
       loadData: B.loadData,
       exact: true,
-      key: 'b'
+      key: 'b',
     }, {
-      component: NotFind
-    }
-  ]
+      component: NotFind,
+    },
+  ],
 }];

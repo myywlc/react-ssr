@@ -1,30 +1,33 @@
-import React, { Component, Fragment } from 'react'
-import { connect } from 'react-redux'
-import { getBList } from './store/actions'
-import { Helmet } from 'react-helmet'
-import styles from './style.css'
-import serverAddStyle from '../../serverAddStyle'
+import React, { Component, Fragment } from 'react';
+import { connect } from 'react-redux';
+import { Helmet } from 'react-helmet';
+import { getBList } from './store/actions';
+import styles from './style.css';
+import serverAddStyle from '../../serverAddStyle';
 
 class B extends Component {
-  
   componentDidMount() {
-      this.props.getBList();
+    const { getBListProps } = this.props;
+    getBListProps();
   }
-  
+
   render() {
-    return <Fragment>
-      <Helmet>
-        <title>
-          B
-        </title>
-      </Helmet>
-      <div className={styles.test}>
-        page B
-        <div>
-          {this.props.data}
+    const { data } = this.props;
+    return (
+      <Fragment>
+        <Helmet>
+          <title>
+            B
+          </title>
+        </Helmet>
+        <div className={styles.test}>
+          page B
+          <div>
+            {data}
+          </div>
         </div>
-      </div>
-    </Fragment>
+      </Fragment>
+    );
   }
 }
 
@@ -33,15 +36,13 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  getBList() {
+  getBListProps() {
     dispatch(getBList());
-  }
+  },
 });
 
 const ExportB = connect(mapStateToProps, mapDispatchToProps)(serverAddStyle(B, styles));
 
-ExportB.loadData = (store) => {
-  return store.dispatch(getBList())
-};
+ExportB.loadData = store => store.dispatch(getBList());
 
-export default ExportB
+export default ExportB;
