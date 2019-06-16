@@ -1,16 +1,16 @@
-import { CHANGE_LIST_Translation } from './constants';
+import { CHANGE_DATA } from './constants'
 
 const defaultState = {
-	translationList: []
-}
+	data: ''
+};
 
 export default (state = defaultState, action) => {
 	switch(action.type) {
-		case CHANGE_LIST_Translation:
+		case CHANGE_DATA:
 			return {
 				...state,
-				translationList: action.list
-			}
+				data: action.data
+			};
 		default:
 			return state;
 	}

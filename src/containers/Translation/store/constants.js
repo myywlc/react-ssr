@@ -1,1 +1,0 @@
-export const CHANGE_LIST_Translation = 'CHANGE_LIST_Translation'

@@ -1,14 +1,7 @@
-import axios from 'axios';
-import config from '../config/index'
+import axios from 'axios'
 
 const createInstance = (req) => axios.create({
-	baseURL: 'http://47.95.113.63/ssr',
-	headers: {
-		cookie: req.get('cookie') || ''
-	},
-	params: {
-		secret: config.secret
-	}
+  baseURL: 'http://localhost:8080/ssr',
 });
 
-export default createInstance;
+export default createInstance

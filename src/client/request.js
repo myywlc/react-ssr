@@ -1,10 +1,7 @@
-import axios from 'axios';
-import config from '../config/index'
+import axios from 'axios'
+
 const instance = axios.create({
-	baseURL: '/',
-	params :{
-		secret: config.secret
-	}
+  baseURL: '/',
 });
 
-export default instance;
+export default instance
