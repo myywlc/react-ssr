@@ -14,7 +14,6 @@ app.use('/api', proxy('http://localhost:8080', {
   proxyReqPathResolver(req) {
     return `/ssr/api${req.url}`;
   },
-
 }));
 
 app.get('*', (req, res) => {
