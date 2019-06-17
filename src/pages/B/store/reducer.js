@@ -1,7 +1,7 @@
 import { CHANGE_DATA } from './constants';
 
 const defaultState = {
-  data: '',
+  data: ''
 };
 
 export default (state = defaultState, action) => {
@@ -9,9 +9,9 @@ export default (state = defaultState, action) => {
     case CHANGE_DATA:
       return {
         ...state,
-        data: action.data,
+        data: action.data
       };
     default:
       return state;
   }
-}
+};

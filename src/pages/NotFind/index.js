@@ -9,11 +9,7 @@ class NotFind extends Component {
   }
 
   render() {
-    return (
-      <div>
-        not find
-      </div>
-    );
+    return <div>not find</div>;
   }
 }
 

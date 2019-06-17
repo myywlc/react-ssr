@@ -16,15 +16,11 @@ class B extends Component {
     return (
       <Fragment>
         <Helmet>
-          <title>
-            B
-          </title>
+          <title>B</title>
         </Helmet>
         <div className={styles.test}>
-          page B
-          <div>
-            {data}
-          </div>
+          <span>page B</span>
+          <div>{data}</div>
         </div>
       </Fragment>
     );
@@ -32,16 +28,19 @@ class B extends Component {
 }
 
 const mapStateToProps = state => ({
-  data: state.b.data,
+  data: state.b.data
 });
 
 const mapDispatchToProps = dispatch => ({
   getBListProps() {
     dispatch(getBList());
-  },
+  }
 });
 
-const ExportB = connect(mapStateToProps, mapDispatchToProps)(serverAddStyle(B, styles));
+const ExportB = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(serverAddStyle(B, styles));
 
 ExportB.loadData = store => store.dispatch(getBList());
 

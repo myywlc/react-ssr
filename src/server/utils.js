@@ -5,17 +5,14 @@ import { Helmet } from 'react-helmet';
 import { renderRoutes } from 'react-router-config';
 import { Provider } from 'react-redux';
 
-
 export const render = (store, routes, req, context) => {
-  const content = renderToString((
+  const content = renderToString(
     <Provider store={store}>
       <StaticRouter location={req.path} context={context}>
-        <div>
-          {renderRoutes(routes)}
-        </div>
+        <div>{renderRoutes(routes)}</div>
       </StaticRouter>
     </Provider>
-  ));
+  );
 
   const helmet = Helmet.renderStatic();
 

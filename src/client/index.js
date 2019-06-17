@@ -11,9 +11,7 @@ const store = getClientStore();
 const App = () => (
   <Provider store={store}>
     <BrowserRouter>
-      <div>
-        {renderRoutes(routes)}
-      </div>
+      <div>{renderRoutes(routes)}</div>
     </BrowserRouter>
   </Provider>
 );

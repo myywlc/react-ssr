@@ -8,13 +8,9 @@ class A extends Component {
     return (
       <Fragment>
         <Helmet>
-          <title>
-            A
-          </title>
+          <title>A</title>
         </Helmet>
-        <div className={styles.test}>
-          page A
-        </div>
+        <div className={styles.test}>page A</div>
       </Fragment>
     );
   }
