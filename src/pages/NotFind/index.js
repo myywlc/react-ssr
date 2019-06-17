@@ -9,11 +9,9 @@ class NotFind extends Component {
   }
 
   render() {
-    const { staticContext } = this.props;
     return (
       <div>
         not find
-        {staticContext}
       </div>
     );
   }
