@@ -10,7 +10,6 @@ const app = express();
 app.use(express.static('public'));
 
 app.use('/api', proxy('http://localhost:8080', {
-
   proxyReqPathResolver(req) {
     return `/ssr/api${req.url}`;
   },
