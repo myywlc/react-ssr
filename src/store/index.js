@@ -5,20 +5,12 @@ import clientAxios from '../client/request';
 import serverAxios from '../server/request';
 
 const reducer = combineReducers({
-  b: bReducer
+  b: bReducer,
 });
 
-export const getServerStore = req =>
-  createStore(
-    reducer,
-    applyMiddleware(thunk.withExtraArgument(serverAxios(req)))
-  );
+export const getServerStore = req => createStore(reducer, applyMiddleware(thunk.withExtraArgument(serverAxios(req))));
 
 export const getClientStore = () => {
   const defaultState = window.context.state;
-  return createStore(
-    reducer,
-    defaultState,
-    applyMiddleware(thunk.withExtraArgument(clientAxios))
-  );
+  return createStore(reducer, defaultState, applyMiddleware(thunk.withExtraArgument(clientAxios)));
 };
