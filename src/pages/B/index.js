@@ -28,18 +28,18 @@ class B extends Component {
 }
 
 const mapStateToProps = state => ({
-  data: state.b.data
+  data: state.b.data,
 });
 
 const mapDispatchToProps = dispatch => ({
   getBListProps() {
     dispatch(getBList());
-  }
+  },
 });
 
 const ExportB = connect(
   mapStateToProps,
-  mapDispatchToProps
+  mapDispatchToProps,
 )(serverAddStyle(B, styles));
 
 ExportB.loadData = store => store.dispatch(getBList());

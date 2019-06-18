@@ -13,18 +13,18 @@ export default [
         path: '/a',
         component: A,
         exact: true,
-        key: 'a'
+        key: 'a',
       },
       {
         path: '/b',
         component: B,
         loadData: B.loadData,
         exact: true,
-        key: 'b'
+        key: 'b',
       },
       {
-        component: NotFind
-      }
-    ]
-  }
+        component: NotFind,
+      },
+    ],
+  },
 ];

@@ -11,7 +11,7 @@ export const render = (store, routes, req, context) => {
       <StaticRouter location={req.path} context={context}>
         <div>{renderRoutes(routes)}</div>
       </StaticRouter>
-    </Provider>
+    </Provider>,
   );
 
   const helmet = Helmet.renderStatic();

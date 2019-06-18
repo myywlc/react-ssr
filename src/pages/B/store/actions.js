@@ -2,7 +2,7 @@ import { CHANGE_DATA } from './constants';
 
 const changeList = data => ({
   type: CHANGE_DATA,
-  data
+  data,
 });
 
 export const getBList = () => (dispatch, getState, axiosInstance) =>
